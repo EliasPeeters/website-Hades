@@ -1,0 +1,125 @@
+<p class="date">Feb 20. 2021 </p>
+<h1>A list of example programms that use rekursion</h1>
+<p>This is just a collection with programms in racket that use rekursion. These solutions may not be perfect but maybe they can help somebody in need 😉.</p>
+
+<h3 id="sumupallelementsofalist">Sum up all elements of a list</h3>
+<pre><code class="c++ language-c++">(define prod
+  (lambda [input]
+    (cond
+      [(empty? input) 1]
+      [else (* (first input) (prod (rest input)))])))
+
+(prod '(3 4 6))
+</code></pre>
+
+<h3 id="multipliesallelementsofalist">Multiplies all elements of a list</h3>
+<pre><code class="c++ language-c++">(define prod
+  (lambda [input]
+    (cond
+      [(empty? input) 1]
+      [else (* (first input) (prod (rest input)))])))
+</code></pre>
+
+<h3 id="checkifalistcontainsanitem">Check if a list contains an item</h3>
+<pre><code class="c++ language-c++">(define enthaelt
+  (lambda [input item]
+    (cond
+      [(empty? input) #false]
+      [(equal? (first input) item) #true]
+      [else (enthaelt (rest input) item)])))
+</code></pre>
+
+<h3 id="declineseveryelementinalistby1">Declines every element in a list by 1</h3>
+<pre><code class="c++ language-c++">(define declist
+  (lambda [input]
+    (cond
+      [(empty? input) '()]
+      [else (cons (- (first input) 1) (declist (rest input))) ])))
+</code></pre>
+
+<h3 id="createsonefalttendlistfromalistthatmaycontainslist">Creates one falttend list from a list that may contains list</h3>
+<pre><code class="c++ language-c++">(define flatten
+  (lambda [input]
+    (cond
+      [(empty? input) '()]
+      [else (cond
+              [(list? (first input)) (cons (first (first input)) (flatten (rest (first input))))]
+              [else (cons (first input) (flatten (rest input)))])])))
+</code></pre>
+
+<h3 id="createsanewlistthatcontainslistthatcontainthenumberofsameelementsinthelist">Creates a new list that contains list that contain the number of same elements in the list</h3>
+<pre><code class="c++ language-c++">(define frequencies
+  (lambda [input]
+    (cond
+      [(list? (first input)) input]
+      [else (frequencies (rest (checkExist input (first input))))])))
+
+(define checkExist
+  (lambda [input item]
+    (cond
+      [(empty? input) (list (list item 1))]
+      [(list? (first input)) (cond
+                               [(equal? item (first (first input))) (cons (list item (+ (first (rest (first input))) 1)) (rest input)) ]
+                               [else (cons (first input) (checkExist (rest input) item))])]
+      [else (cons (first input) (checkExist (rest input) item))])))
+</code></pre>
+
+<h3 id="calculatethesquarenumber">Calculate the square number</h3>
+<pre><code class="c++ language-c++">(define f
+  (lambda [n]
+    (cond
+      [(equal? n 1) 1]
+      [else (+ (- (* 2 n) 1) (f (- n 1)))]))) 
+</code></pre>
+
+<h3 id="checkifanumberisaprimenumber">Check if a number is a prime number</h3>
+<pre><code class="c++ language-c++">(define checkPrime
+  (lambda [n]
+    (cond
+      [(equal? n 0) #false]
+      [(equal? n 1) #false]
+      [(equal? n 2) #true]
+      [else (checkPrimeHelper n (- n 1))])))
+
+
+(define checkPrimeHelper
+  (lambda [n helper]
+    (cond
+      [(equal? helper 1) #true]
+      [else (cond
+              [(equal? (modulo n helper) 0) #false]
+              [else (checkPrimeHelper n (- helper 1))])
+              ])))
+</code></pre>
+
+<h3 id="calculatethefaculty">Calculate the faculty</h3>
+<pre><code class="c++ language-c++">(define fakut
+ (lambda [n]
+   (cond
+     [(equal? n 0) 1]
+     [else (* n (fakut (- n 1)))])))
+</code></pre>
+
+<h3 id="calculatingthereductionofamedizinthatreducesby40after24hstartingat5mg">Calculating the reduction of a medizin that reduces by 40% after 24h. (Starting at 5mg)</h3>
+<pre><code class="c++ language-c++">(define medikament
+  (lambda [n]
+    (cond
+      [(equal? n 0) 5]
+      [else (* 5 (faktor n))])))
+
+(define faktor
+  (lambda [n]
+    (cond
+      [(equal? n 0) 1]
+      [else (* 0.4 (faktor (- n 1)))])))
+</code></pre>
+
+<h3 id="sumuptheelementsinalistandstopwhenafixednumberisreached">Sum up the elements in a list and stop when a fixed number is reached</h3>
+<pre><code class="c++ language-c++">(define anzahl-bevor-summe
+  (lambda [sum list]
+    (cond
+      [(empty? list) error]
+      [else (cond
+              [(&lt;= (- sum (first list)) 0) 0]
+              [else (+ 1 (anzahl-bevor-summe (- sum (first list)) (rest list))) ])])))
+</code></pre>
