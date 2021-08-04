@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node websiteblogbackend.js",
     "start-local": "npm start",
-    "start-live": "git pull; npm i; forever restart websiteblogbackend",
+    "start-live": "git pull; npm i; forever restart websiteblogbackend.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
