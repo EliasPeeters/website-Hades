@@ -1,4 +1,5 @@
-const fs = require('fs')
+const fs = require('fs');
+let attributesRoute = require('./attributesRoute')
 
 app.get('/article/:name', function(req, res) {
     try {
@@ -6,5 +7,9 @@ app.get('/article/:name', function(req, res) {
     } catch {
         res.send('404: That article does not exist')
     }
-    res.render(req.params.name)
+    let attributes = attributesRoute.getAttributesOneArticle(req.params.name);
+    let header = `<p class="date">${attributes.date}</p>
+    <h1>${attributes.heading}</h1>
+    `
+    res.render(req.params.name, {header: header})
 })
