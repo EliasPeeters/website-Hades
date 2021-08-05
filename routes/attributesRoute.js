@@ -8,12 +8,12 @@ function getAttributes(server = 'external', sort = 'date') {
     while (i--) {
         if (attributes.articles[i].visible == false) {
             attributes.articles.splice(i, 1)
+        } else {
+            attributes.articles[i].image = serverAdress + '/assets/'+ attributes.articles[i].image
         }
+        
     }
 
-    for (article in attributes) {
-        attributes[article].image =  serverAdress + '/assets/' +attributes[article].image;
-    }
     if (sort == 'date') {
         attributes.articles.sort((a, b) => (a.dateUTC < b.dateUTC) ? 1 : -1);
     } else if (sort == 'date-1') {
@@ -36,8 +36,8 @@ function getAttributes(server = 'external', sort = 'date') {
     return attributes
 }
 
-function getAttributesOneArticle(name) {
-    let attributes = getAttributes();
+function getAttributesOneArticle(name, server) {
+    let attributes = getAttributes(server);
     const position = attributes.articles.indexOf(name);
 
     let articlePostionInArray = -1
@@ -46,7 +46,6 @@ function getAttributesOneArticle(name) {
             articlePostionInArray = index
         }
     });
-    console.log(articlePostionInArray)
     // console.log(attributes.articles)
     if (articlePostionInArray == -1) {
         return 'Article does not exist';
@@ -65,7 +64,8 @@ app.get('/attributes', function(req, res) {
 
 
 app.get('/attributes/:name', function(req, res) {
-    let attributes = getAttributesOneArticle(req.params.name);
+    let server = req.query.server == 'internal' ? 'internal':'external';
+    let attributes = getAttributesOneArticle(req.params.name, server);
     res.send(attributes)
 })
 
