@@ -3,5 +3,10 @@
         "heading": "A list of example programms that use rekursion",
         "date": "2021-02-20",
         "image": "racket.jpg"
+    },
+    "testArticle": {
+        "heading": "Test",
+        "date": "2021-08-05",
+        "image": "racket.jpg"
     }
 }
