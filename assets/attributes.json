@@ -1,12 +1,20 @@
 {
-    "rekursion" : {
-        "heading": "A list of example programms that use rekursion",
-        "date": "2021-02-20",
-        "image": "racket.jpg"
-    },
-    "testArticle": {
-        "heading": "Test",
-        "date": "2021-08-05",
-        "image": "racket.jpg"
-    }
+    "articles" : [
+        {   
+            "name": "rekursion",
+            "heading": "A list of example programms that use rekursion",
+            "date": "2021-02-20",
+            "description": "This is just a collection with programms in racket that use rekursion.",
+            "image": "racket.jpg",
+            "visible": true
+        },
+        {   
+            "name": "numeralSystems",
+            "heading": "A short introduction to numeral systems",
+            "date": "2021-08-04",
+            "description": "Just a very short but interactive blog article", 
+            "image": "numeralSystems.jpeg",
+            "visible": false
+        }
+    ]
 }
