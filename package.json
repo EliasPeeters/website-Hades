@@ -4,9 +4,9 @@
   "description": "",
   "main": "websiteblogbackend.js",
   "scripts": {
-    "start": "node websiteblogbackend.js",
+    "start": "node website-hades.js",
     "start-local": "npm start",
-    "start-live": "git pull; npm i; forever restart websiteblogbackend.js",
+    "start-live": "git pull; npm i; forever restart website-hades.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
