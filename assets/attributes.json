@@ -6,7 +6,10 @@
             "date": "2021-02-20",
             "description": "This is just a collection with programms in racket that use rekursion.",
             "image": "racket.jpg",
-            "visible": true
+            "visible": true,
+            "css": [
+                "test.css"
+            ]
         },
         {   
             "name": "numeralSystems",
@@ -14,7 +17,7 @@
             "date": "2021-08-04",
             "description": "Just a very short but interactive blog article", 
             "image": "numeralSystems.jpeg",
-            "visible": false
+            "visible": true
         }
     ]
 }

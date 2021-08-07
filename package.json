@@ -5,8 +5,9 @@
   "main": "websiteblogbackend.js",
   "scripts": {
     "start": "node website-hades.js",
-    "start-local": "npm start",
-    "start-live": "git pull; npm i; forever restart website-hades.js",
+    "start-local": "npm run sass2; npm start",
+    "start-live": "git pull; npm i; npm run sass2; forever restart website-hades.js",
+    "sass2": "node-sass ./scss -o ./assets/css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

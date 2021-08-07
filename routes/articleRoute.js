@@ -3,7 +3,8 @@ const fs = require('fs');
 let attributesRoute = require('./attributesRoute');
 
 app.get('/article/:name', function(req, res) {
-    let attributes = attributesRoute.getAttributesOneArticle(req.params.name);
+    let server = req.query.server;
+    let attributes = attributesRoute.getAttributesOneArticle(req.params.name, server);
     if (attributes == 'Article does not exist') {
         res.send(attributes);
         return;

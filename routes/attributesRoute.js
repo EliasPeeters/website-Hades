@@ -9,9 +9,15 @@ function getAttributes(server = 'external', sort = 'date') {
         if (attributes.articles[i].visible == false) {
             attributes.articles.splice(i, 1)
         } else {
-            attributes.articles[i].image = serverAdress + '/assets/'+ attributes.articles[i].image
+            attributes.articles[i].image = serverAdress + '/assets/'+ attributes.articles[i].image;
+            if (attributes.articles[i].css != undefined) {
+                for (let ii = 0; ii < attributes.articles[i].css.length; ii++) {
+                    attributes.articles[i].css[ii] = `${serverAdress}/assets/css/${attributes.articles[i].css[ii]}`
+                }
+            } else {
+                attributes.articles[i].css = []
+            }
         }
-        
     }
 
     if (sort == 'date') {
