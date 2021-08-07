@@ -1,6 +1,6 @@
 const { RSA_NO_PADDING } = require('constants');
 const fs = require('fs');
-let attributesRoute = require('./attributesRoute')
+let attributesRoute = require('./attributesRoute');
 
 app.get('/article/:name', function(req, res) {
     let attributes = attributesRoute.getAttributesOneArticle(req.params.name);
@@ -8,10 +8,12 @@ app.get('/article/:name', function(req, res) {
         res.send(attributes);
         return;
     }
-
-    let header = `<p class="date">${attributes.date}</p>
-    <h1>${attributes.heading}</h1>
-    `
-    res.render('article', {header: header, articleName: req.params.name})
+       
+    res.render(`article/${req.params.name}`, {attributes: attributes, articleName: req.params.name}, (err, html) => {
+        res.send({
+            html: html,
+            ...attributes
+        })
+    })
     // res.render(req.params.name, {header: header})
 })
