@@ -17,7 +17,7 @@
             "date": "2021-08-04",
             "description": "Just a very short but interactive blog article", 
             "image": "numeralSystems.jpeg",
-            "visible": true,
+            "visible": false,
             "js": [
                 "dualCalculator.js"
             ],
