@@ -118,8 +118,20 @@ function dezimalToDual(inputNumber, length) {
     return outputNumber
 }
 
-console.log(additionDual('1001', '10101'))
+function dualToDezimal(inputNumber) {
+    let outputNumber = 0;
 
+    let lengthOfNumber = inputNumber.length;
+    let power = 0;
+    for (let i = lengthOfNumber-1; i >= 0; i--) {
+        let currentNumberInInputNumber = inputNumber.substring(i, i+1);
+        if (currentNumberInInputNumber == '1') {
+            outputNumber += Math.pow(2, power);   
+        }
+        power++
+    }
+    return outputNumber;
+}
 
 
 function newAdditionTask() {
@@ -131,11 +143,38 @@ function newAdditionTask() {
     document.getElementsByClassName('additionOutput')[0].innerHTML = '';
 }
 
-function showSolution() {
+function showAdditionSolution() {
     let firstNumber = document.getElementsByClassName('additionFirstNumber')[0].innerHTML;
     let secondNumber = document.getElementsByClassName('additionSecondNumber')[0].innerHTML;
     console.log(firstNumber)
     let solution = additionDual(firstNumber, secondNumber);
     document.getElementsByClassName('additionOutput')[0].innerHTML = solution;
-
 }
+
+function newBinaryToDecimalTask() {
+    let number = randomDualNumber(2, 8);
+    document.getElementsByClassName('binaryToDecimalNumber')[0].innerHTML = number;
+}
+
+function showBinaryToDecimalSolution() {
+    let solution = dualToDezimal(document.getElementsByClassName('binaryToDecimalNumber')[0].innerHTML);
+    document.getElementsByClassName('binaryToDecimalOutput')[0].innerHTML = solution;
+}
+
+function newDecimalTOBinary() {
+    let number = Math.round(Math.random()*255);
+    document.getElementsByClassName('decimalToBinaryNumber')[0].innerHTML = number;
+}
+
+function showDecimalToBinarySolution() {
+    let solution = dezimalToDual(document.getElementsByClassName('decimalToBinaryNumber')[0].innerHTML)
+    document.getElementsByClassName('decimalToBinaryOutput')[0].innerHTML = solution;   
+}
+
+function init() {
+    newBinaryToDecimalTask();
+    newAdditionTask();
+    newDecimalTOBinary();
+}
+
+init();

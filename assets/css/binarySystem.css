@@ -4,7 +4,8 @@
   max-width: 600px;
   margin: 0 auto;
   padding-bottom: 20px;
-  margin-top: 30px; }
+  margin-top: 30px;
+  background-color: #FCFBF6; }
   .calculatingBlock h2 {
     background-color: #3D405B;
     color: white;
@@ -51,3 +52,10 @@
       .calculatingBlock .calculatingBlockContent .questionBlock .calcSign {
         margin-top: -18px;
         margin-right: 170px; }
+      .calculatingBlock .calculatingBlockContent .questionBlock .simpleCalcNumber {
+        text-align: center;
+        margin-top: 15px; }
+      .calculatingBlock .calculatingBlockContent .questionBlock .simpleCalcOutput {
+        text-align: center;
+        margin-top: 10px;
+        letter-spacing: normal; }
