@@ -19,7 +19,8 @@
             "image": "numeralSystems.jpeg",
             "visible": true,
             "js": [
-                "dualCalculator.js"
+                "dualCalculator.js",
+                "numeralSystemFunctions.js"
             ],
             "css": [
                 "binarySystem.css"
