@@ -10,12 +10,23 @@ function getAttributes(server = 'external', sort = 'date') {
             attributes.articles.splice(i, 1)
         } else {
             attributes.articles[i].image = serverAdress + '/assets/'+ attributes.articles[i].image;
+
+            // css linking
             if (attributes.articles[i].css != undefined) {
                 for (let ii = 0; ii < attributes.articles[i].css.length; ii++) {
                     attributes.articles[i].css[ii] = `${serverAdress}/assets/css/${attributes.articles[i].css[ii]}`
                 }
             } else {
                 attributes.articles[i].css = []
+            }
+
+            // js linking
+            if (attributes.articles[i].js != undefined) {
+                for (let ii = 0; ii < attributes.articles[i].js.length; ii++) {
+                    attributes.articles[i].js[ii] = `${serverAdress}/assets/js/${attributes.articles[i].js[ii]}`
+                }
+            } else {
+                attributes.articles[i].js = []
             }
         }
     }
