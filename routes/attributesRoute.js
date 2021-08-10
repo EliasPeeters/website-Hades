@@ -1,7 +1,7 @@
 const fs = require('fs')
 
 function getAttributes(server = 'external', sort = 'date') {
-    let serverAdress = server == 'external'? 'https://hades.eliaspeeters.de':'http://localhost:8083'
+    let serverAdress = server == 'external'? 'https://eliaspeeters.de/hades':'http://localhost:8083'
 
     let attributes = JSON.parse(fs.readFileSync('assets/attributes.json'))
     let i = attributes.articles.length;
