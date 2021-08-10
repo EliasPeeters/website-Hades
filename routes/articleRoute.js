@@ -2,7 +2,7 @@ const { RSA_NO_PADDING } = require('constants');
 const fs = require('fs');
 let attributesRoute = require('./attributesRoute');
 
-app.get('/article/:name', function(req, res) {
+function sendArticle(req, res) {
     let server = req.query.server;
     let attributes = attributesRoute.getAttributesOneArticle(req.params.name, server);
     if (attributes == 'Article does not exist') {
@@ -16,5 +16,12 @@ app.get('/article/:name', function(req, res) {
             ...attributes
         })
     })
-    // res.render(req.params.name, {header: header})
+}
+
+app.get('/article/:name', function(req, res) {
+    sendArticle(req, res)
+})
+
+app.get('/hades/article/:name', function(req, res) {
+    sendArticle(req, res)
 })

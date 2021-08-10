@@ -71,19 +71,34 @@ function getAttributesOneArticle(name, server) {
     }
 }
 
-app.get('/attributes', function(req, res) {
+function getAttributesRoute(req, res) {
     let server = req.query.server == 'internal' ? 'internal':'external';
     let sort = req.query.sort == null ? 'date':req.query.sort;
     
     let attributes = getAttributes(server, sort)
     res.send(attributes)  
-})
+}
 
-
-app.get('/attributes/:name', function(req, res) {
+function getAttributesOneRoute(req, res) {
     let server = req.query.server == 'internal' ? 'internal':'external';
     let attributes = getAttributesOneArticle(req.params.name, server);
     res.send(attributes)
+}
+
+app.get('/attributes', function(req, res) {
+    getAttributesRoute(req, res)
+})
+
+app.get('/attributes/:name', function(req, res) {
+    getAttributesOneRoute(req, res)
+})
+
+app.get('/hades/attributes', function(req, res) {
+    getAttributesRoute(req, res)
+})
+
+app.get('/hades/attributes/:name', function(req, res) {
+    getAttributesOneRoute(req, res)
 })
 
 module.exports = {getAttributes, getAttributesOneArticle}
