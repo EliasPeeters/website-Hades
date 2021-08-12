@@ -1,6 +1,37 @@
 <p>In this article you can find many different tasks for understanding numeral Systems.</p>
 
 <div class="calculatingBlock">
+    <h2>Task Sheet Generator</h2>
+
+    <form method="POST" action="/heraCreatePdf?name=<%= articleName %>">
+        <label>binaryToDezimal Tasks</label>
+        <input class="inputPDFModal" type="number" name="binaryToDezimal" value="10"><br>
+    
+        <label>dezimalToBinary Tasks</label>
+        <input class="inputPDFModal" type="number" name="dezimalToBinary" value="10"><br>
+        <input class="inputButton button secondButton" type="submit">
+    </form>
+    
+    <% if (query.task != null) { %>
+        <div class="outputPDFModal">
+            <% if (query.task != null) { %>
+                <a class="aButton" href="http://<%= query.task %>" target="_blank">
+                    <div class="button secondButton">Download Task</div>
+                </a>
+            <% } %>
+        
+        
+            <% if (query.solution != null) { %>
+                <a class="aButton" href="http://<%= query.solution %>" target="_blank">
+                    <div class="button secondButton">Download Solution</div>
+                </a>
+            <% } %>
+        </div>
+    <% } %>
+    
+</div>
+
+<div class="calculatingBlock">
     <h2>Binary to Dezimal</h2>
 
     <div class="calculatingBlockContent">

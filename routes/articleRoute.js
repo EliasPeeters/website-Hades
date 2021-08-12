@@ -9,8 +9,8 @@ function sendArticle(req, res) {
         res.send(attributes);
         return;
     }
-       
-    res.render(`article/${req.params.name}`, {attributes: attributes, articleName: req.params.name}, (err, html) => {
+    console.log(req.query)
+    res.render(`article/${req.params.name}`, {attributes: attributes, articleName: req.params.name, query: req.query}, (err, html) => {
         res.send({
             html: html,
             ...attributes

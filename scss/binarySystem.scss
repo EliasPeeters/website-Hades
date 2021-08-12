@@ -86,3 +86,48 @@
         }
     }
 }
+
+.inputButton {
+    height: 45px;
+    float: none;
+    clear: both;
+    padding-top: 2px;
+}
+
+.aButton {
+    color: black;
+    width: 200px;
+    text-decoration: none;
+    .button {
+        width: 200px;
+        float: none;
+    }
+}
+
+.inputPDFModal {
+    border: 3px $blueColor solid;
+    background-color: $backgroundColor;
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.outputPDFModal {
+    width: calc(100% - 80px);
+    margin-left: 20px;
+    border-radius: 20px;
+    display: flex;
+    padding: 20px;
+    padding-bottom: 0;
+    justify-content: space-between;
+}
+
+.calculatingBlock {
+    form {
+        width: calc(100% - 80px);
+        margin-left: 20px;
+        border-radius: 20px;
+        padding: 20px;
+        border: 3px $blueColor solid;
+    }
+}
