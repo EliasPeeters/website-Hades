@@ -101,3 +101,6 @@
   border-radius: 20px;
   padding: 20px;
   border: 3px #3D405B solid; }
+  .calculatingBlock form label {
+    min-width: 200px;
+    display: inline-block; }
