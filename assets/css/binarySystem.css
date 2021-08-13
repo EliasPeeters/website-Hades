@@ -69,7 +69,8 @@
 .aButton {
   color: black;
   width: 200px;
-  text-decoration: none; }
+  text-decoration: none;
+  margin: 5px; }
   .aButton .button {
     width: 200px;
     float: none; }
@@ -88,7 +89,11 @@
   display: flex;
   padding: 20px;
   padding-bottom: 0;
-  justify-content: space-between; }
+  justify-content: space-between;
+  flex-wrap: wrap; }
+  @media (max-width: 560px) {
+    .outputPDFModal {
+      justify-content: space-evenly; } }
 
 .calculatingBlock form {
   width: calc(100% - 80px);

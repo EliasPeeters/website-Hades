@@ -4,11 +4,15 @@
     <h2>Task Sheet Generator</h2>
 
     <form method="POST" action="/heraCreatePdf?name=<%= articleName %>">
-        <label>binaryToDezimal Tasks</label>
-        <input class="inputPDFModal" type="number" name="binaryToDezimal" value="10"><br>
+        <label>binaryToDecimal Tasks</label>
+        <input autocomplete="off" class="inputPDFModal" type="number" name="binaryToDezimal" value="10"><br>
     
-        <label>dezimalToBinary Tasks</label>
-        <input class="inputPDFModal" type="number" name="dezimalToBinary" value="10"><br>
+        <label>decimalToBinary Tasks</label>
+        <input autocomplete="off" class="inputPDFModal" type="number" name="dezimalToBinary" value="10"><br>
+
+        <label>BinaryAddition Tasks</label>
+        <input autocomplete="off" class="inputPDFModal" type="number" name="binaryAddition" value="10"><br>
+        
         <input class="inputButton button secondButton" type="submit">
     </form>
 
@@ -32,7 +36,7 @@
 </div>
 
 <div class="calculatingBlock">
-    <h2>Binary to Dezimal</h2>
+    <h2>Binary to Decimal</h2>
 
     <div class="calculatingBlockContent">
         <div class="questionBlock">
@@ -58,7 +62,7 @@
 </div>
 
 <div class="calculatingBlock">
-    <h2>Dezimal to Binary</h2>
+    <h2>Decimal to Binary</h2>
 
     <div class="calculatingBlockContent">
         <div class="questionBlock">
