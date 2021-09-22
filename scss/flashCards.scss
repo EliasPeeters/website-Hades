@@ -1,0 +1,54 @@
+@import "variables.scss";
+
+.flashcardWrapper {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 30px;
+    display: none;
+
+    .flashcard {
+        max-width: 600px;
+        width: 100%;
+        border: $blueColor 3px solid;
+        background-color: $backgroundColor;
+        min-height: 300px;
+        border-radius: 20px;
+        position: relative;
+
+        .question {
+            width: 100%;
+            height: 50px;
+            border-bottom: $blueColor 3px solid;
+            text-align: center;
+            background-color: $blueColor;
+            border-radius: 15px 15px 0px 0;
+            font-size: 20px;
+            padding-top: 10px;
+            display: flex;
+            justify-content: space-around;
+
+            p {
+                background-color: $blueColor !important;
+                width: 90%;
+                color: white;
+                margin-top: 10px;
+            }
+        }
+
+        .answer {
+            width: calc(100% - 40px);
+            padding: 20px;
+            visibility: hidden;
+        }
+
+        .buttonWrapper {
+            position: absolute;
+            bottom: 20px;
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+        }
+        
+    }
+}

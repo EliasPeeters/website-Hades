@@ -25,6 +25,20 @@
             "css": [
                 "binarySystem.css"
             ]
+        },
+        {   
+            "name": "javaFlashcards",
+            "heading": "Java Flashcards for EidOP (german only)",
+            "date": "2021-09-22",
+            "description": "Just a quick article for java flashcards", 
+            "image": "java.png",
+            "visible": true,
+            "js": [
+                "javaFlashCards.js"
+            ],
+            "css": [
+                "flashCards.css"
+            ]
         }
     ]
 }

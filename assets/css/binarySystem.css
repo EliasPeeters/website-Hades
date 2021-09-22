@@ -5,82 +5,103 @@
   margin: 0 auto;
   padding-bottom: 20px;
   margin-top: 30px;
-  background-color: #FCFBF6; }
-  .calculatingBlock h2 {
-    background-color: #3D405B;
-    color: white;
-    padding: 10px;
-    margin-top: 0 !important;
-    border-radius: 15px 15px 0 0; }
+  background-color: #FCFBF6;
+}
+.calculatingBlock h2 {
+  background-color: #3D405B;
+  color: white;
+  padding: 10px;
+  margin-top: 0 !important;
+  border-radius: 15px 15px 0 0;
+}
+.calculatingBlock .calculatingBlockContent {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 450px) {
   .calculatingBlock .calculatingBlockContent {
-    display: flex;
-    justify-content: space-between; }
-    @media (max-width: 450px) {
-      .calculatingBlock .calculatingBlockContent {
-        display: block; }
-        .calculatingBlock .calculatingBlockContent .settings {
-          margin-top: 20px; }
-        .calculatingBlock .calculatingBlockContent .settingsButton {
-          width: calc(90% - 10px);
-          margin-left: 20px; } }
-    .calculatingBlock .calculatingBlockContent .settings {
-      display: flex;
-      flex-wrap: wrap; }
-    .calculatingBlock .calculatingBlockContent .questionBlock {
-      width: 200px;
-      height: 100px;
-      margin-left: 20px;
-      text-align: right;
-      border: #3D405B 3px solid;
-      border-radius: 20px;
-      padding: 10px;
-      margin-right: 10px; }
-      @media (max-width: 450px) {
-        .calculatingBlock .calculatingBlockContent .questionBlock {
-          width: calc(90% - 30px);
-          margin-left: 20px; }
-          .calculatingBlock .calculatingBlockContent .questionBlock .questionBlockContent {
-            margin: 0 auto;
-            width: 200px; } }
-      .calculatingBlock .calculatingBlockContent .questionBlock p {
-        background-color: none !important;
-        font-family: 'IBM Plex Mono', monospace;
-        letter-spacing: 8px; }
-      .calculatingBlock .calculatingBlockContent .questionBlock .line {
-        font-family: 'Roboto', sans-serif;
-        letter-spacing: normal; }
-      .calculatingBlock .calculatingBlockContent .questionBlock .calcSign {
-        margin-top: -18px;
-        margin-right: 170px; }
-      .calculatingBlock .calculatingBlockContent .questionBlock .simpleCalcNumber {
-        text-align: center;
-        margin-top: 15px; }
-      .calculatingBlock .calculatingBlockContent .questionBlock .simpleCalcOutput {
-        text-align: center;
-        margin-top: 10px;
-        letter-spacing: normal; }
+    display: block;
+  }
+  .calculatingBlock .calculatingBlockContent .settings {
+    margin-top: 20px;
+  }
+  .calculatingBlock .calculatingBlockContent .settingsButton {
+    width: calc(90% - 10px);
+    margin-left: 20px;
+  }
+}
+.calculatingBlock .calculatingBlockContent .settings {
+  display: flex;
+  flex-wrap: wrap;
+}
+.calculatingBlock .calculatingBlockContent .questionBlock {
+  width: 200px;
+  height: 100px;
+  margin-left: 20px;
+  text-align: right;
+  border: #3D405B 3px solid;
+  border-radius: 20px;
+  padding: 10px;
+  margin-right: 10px;
+}
+@media (max-width: 450px) {
+  .calculatingBlock .calculatingBlockContent .questionBlock {
+    width: calc(90% - 30px);
+    margin-left: 20px;
+  }
+  .calculatingBlock .calculatingBlockContent .questionBlock .questionBlockContent {
+    margin: 0 auto;
+    width: 200px;
+  }
+}
+.calculatingBlock .calculatingBlockContent .questionBlock p {
+  background-color: none !important;
+  font-family: "IBM Plex Mono", monospace;
+  letter-spacing: 8px;
+}
+.calculatingBlock .calculatingBlockContent .questionBlock .line {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: normal;
+}
+.calculatingBlock .calculatingBlockContent .questionBlock .calcSign {
+  margin-top: -18px;
+  margin-right: 170px;
+}
+.calculatingBlock .calculatingBlockContent .questionBlock .simpleCalcNumber {
+  text-align: center;
+  margin-top: 15px;
+}
+.calculatingBlock .calculatingBlockContent .questionBlock .simpleCalcOutput {
+  text-align: center;
+  margin-top: 10px;
+  letter-spacing: normal;
+}
 
 .inputButton {
   height: 45px;
   float: none;
   clear: both;
-  padding-top: 2px; }
+  padding-top: 2px;
+}
 
 .aButton {
   color: black;
   width: 200px;
   text-decoration: none;
-  margin: 5px; }
-  .aButton .button {
-    width: 200px;
-    float: none; }
+  margin: 5px;
+}
+.aButton .button {
+  width: 200px;
+  float: none;
+}
 
 .inputPDFModal {
   border: 3px #3D405B solid;
   background-color: #FCFBF6;
   border-radius: 20px;
   padding: 10px;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+}
 
 .outputPDFModal {
   width: calc(100% - 80px);
@@ -90,17 +111,24 @@
   padding: 20px;
   padding-bottom: 0;
   justify-content: space-between;
-  flex-wrap: wrap; }
-  @media (max-width: 560px) {
-    .outputPDFModal {
-      justify-content: space-evenly; } }
+  flex-wrap: wrap;
+}
+@media (max-width: 560px) {
+  .outputPDFModal {
+    justify-content: space-evenly;
+  }
+}
 
 .calculatingBlock form {
   width: calc(100% - 80px);
   margin-left: 20px;
   border-radius: 20px;
   padding: 20px;
-  border: 3px #3D405B solid; }
-  .calculatingBlock form label {
-    min-width: 200px;
-    display: inline-block; }
+  border: 3px #3D405B solid;
+}
+.calculatingBlock form label {
+  min-width: 200px;
+  display: inline-block;
+}
+
+/*# sourceMappingURL=binarySystem.css.map */

@@ -1,0 +1,46 @@
+<% for (let i = 0; i < data.cards.length; i++) {%>
+    <div class="flashcardWrapper card<%= data.cards[i].id %>">
+        <div class="flashcard">
+            <div class="question">
+                <p><%= data.cards[i].question %></p>
+            </div>
+    
+            <div class="answer answer<%= data.cards[i].id %>">
+                <p><%= data.cards[i].answer %></p>
+            </div>
+    
+            <div class="buttonWrapper">
+                <div class="button secondButton" onclick="showAnswer('answer<%= data.cards[i].id %>')">
+                    Lösung
+                 </div>
+    
+                 <div class="button secondButton" onclick="showNextCard(<%= data.cards[i].id %>)">
+                    Nächste Karte
+                 </div>
+            </div>
+        </div>
+    </div>
+<% }; %> 
+
+<div class="flashcardWrapper">
+    <div class="flashcard">
+        <div class="question">
+            <p>Klasse</p>
+        </div>
+
+        <div class="answer">
+            <p>Sind Baupl ̈ane/Schablonen fu ̈r Ob- jekte. Eine Klasse beschreibt den Zu- standsraum und das Verhalten fu ̈r gleichartige Objekte.
+                Objekte nennt man auch Exemplare (Instanzen) einer Klasse.</p>
+        </div>
+
+        <div class="buttonWrapper">
+            <div class="button secondButton">
+                Lösung
+             </div>
+
+             <div class="button secondButton">
+                Nächste Karte
+             </div>
+        </div>
+    </div>
+</div>

@@ -1,7 +1,11 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+let mysqlSetup = require('./mysqlSetup');
+let credentialsLoader = require('./getCredentials');
 
 app = express();
+credentials = credentialsLoader.getCredentials();
+connection = mysqlSetup.getConnection();
 
 app.set('view engine', 'ejs')
 app.use(bodyParser.urlencoded({ extended: true }));
