@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node website-hades.js",
     "start-local": "npm run sass2; npm start",
-    "start-live": "git pull; npm i; npm run sass2; forever restart website-hades.js",
+    "start-live": "git reset --hard; git pull; npm i; npm run sass2; forever restart website-hades.js",
     "sass2": "sass ./scss:./assets/css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
