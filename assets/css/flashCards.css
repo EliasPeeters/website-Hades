@@ -14,9 +14,14 @@
   border-radius: 20px;
   position: relative;
 }
+@media (max-width: 450px) {
+  .flashcardWrapper .flashcard {
+    min-height: 380px;
+  }
+}
 .flashcardWrapper .flashcard .question {
   width: 100%;
-  height: 50px;
+  min-height: 50px;
   border-bottom: #3D405B 3px solid;
   text-align: center;
   background-color: #3D405B;
@@ -38,12 +43,29 @@
   visibility: hidden;
   padding-bottom: 80px;
 }
+@media (max-width: 450px) {
+  .flashcardWrapper .flashcard .answer {
+    padding-bottom: 160px;
+  }
+}
 .flashcardWrapper .flashcard .buttonWrapper {
   position: absolute;
   bottom: 20px;
   display: flex;
   width: 100%;
   justify-content: space-around;
+}
+.flashcardWrapper .flashcard .buttonWrapper .button {
+  clear: both;
+}
+@media (max-width: 450px) {
+  .flashcardWrapper .flashcard .buttonWrapper {
+    display: block;
+  }
+  .flashcardWrapper .flashcard .buttonWrapper .button {
+    width: 90%;
+    margin-left: 5%;
+  }
 }
 
 /*# sourceMappingURL=flashCards.css.map */
