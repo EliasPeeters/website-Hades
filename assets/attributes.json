@@ -31,7 +31,7 @@
             "heading": "Java Flashcards for EidOP (german only)",
             "date": "2021-09-22",
             "description": "Just a quick article for java flashcards", 
-            "image": "java.png",
+            "image": "java.jpg",
             "visible": true,
             "js": [
                 "javaFlashCards.js"
