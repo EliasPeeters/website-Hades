@@ -41,6 +41,7 @@ function showDecimalToBinarySolution() {
 function newHexToDecimalTask() {
     let number = randomHexNumber();
     document.getElementsByClassName('hexToDecimalNumber')[0].innerHTML = number;
+    document.getElementsByClassName('hexToDecimalOutput')[0].innerHTML = '';
 }
 
 function showHexToDecimalSolution() {
@@ -51,6 +52,7 @@ function showHexToDecimalSolution() {
 function newDecimalToHexTask() {
     let number = Math.round(Math.random()*255);
     document.getElementsByClassName('decimalToHexNumber')[0].innerHTML = number;
+    document.getElementsByClassName('decimalToHexOutput')[0].innerHTML = '';
 }
 
 function showDecimalToHexSolution() {
