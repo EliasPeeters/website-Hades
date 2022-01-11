@@ -35,10 +35,37 @@ function showDecimalToBinarySolution() {
     document.getElementsByClassName('decimalToBinaryOutput')[0].innerHTML = solution;   
 }
 
+
+
+// HEX
+function newHexToDecimalTask() {
+    let number = randomHexNumber();
+    document.getElementsByClassName('hexToDecimalNumber')[0].innerHTML = number;
+}
+
+function showHexToDecimalSolution() {
+    let solution = hexToDecimal(document.getElementsByClassName('hexToDecimalNumber')[0].innerHTML);
+    document.getElementsByClassName('hexToDecimalOutput')[0].innerHTML = solution;
+}
+
+function newDecimalToHexTask() {
+    let number = Math.round(Math.random()*255);
+    document.getElementsByClassName('decimalToHexNumber')[0].innerHTML = number;
+}
+
+function showDecimalToHexSolution() {
+    let number = parseInt(document.getElementsByClassName('decimalToHexNumber')[0].innerHTML);
+    let solution = decimalToHex(number);
+    document.getElementsByClassName('decimalToHexOutput')[0].innerHTML = solution;
+}
+
+
 function init() {
     newBinaryToDecimalTask();
     newAdditionTask();
     newDecimalTOBinary();
+    newHexToDecimalTask();
+    newDecimalToHexTask();
 }
 
 init();

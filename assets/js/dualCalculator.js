@@ -132,3 +132,16 @@ function dualToDezimal(inputNumber) {
     }
     return outputNumber;
 }
+
+function decimalToHex(input) {
+    return input.toString(16).toUpperCase();
+}
+
+function hexToDecimal(input) {
+    return parseInt(input, 16);
+}
+
+function randomHexNumber() {
+    let number = Math.round(Math.random()*255);
+    return decimalToHex(number)
+}
