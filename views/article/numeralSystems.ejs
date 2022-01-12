@@ -4,6 +4,9 @@
     <h2>Task Sheet Generator</h2>
 
     <form method="POST" action="/heraCreatePdf?name=<%= articleName %>">
+        <label>Table Tasks:</label>
+        <input autocomplete="off" class="inputPDFModal" type="number" name="table" value="10"><br>
+
         <label>binaryToDecimal Tasks:</label>
         <input autocomplete="off" class="inputPDFModal" type="number" name="binaryToDezimal" value="10"><br>
     
