@@ -131,4 +131,36 @@
   display: inline-block;
 }
 
+.calculatingBlockRed {
+  border: #E07A5F 3px solid;
+}
+.calculatingBlockRed form {
+  border: 3px #E07A5F solid;
+}
+.calculatingBlockRed h2 {
+  background-color: #E07A5F;
+}
+.calculatingBlockRed .calculatingBlockContent .questionBlock {
+  border: #E07A5F 3px solid;
+}
+.calculatingBlockRed .button {
+  border: 3px #E07A5F solid;
+}
+
+.calculatingBlockGreen {
+  border: #81B29A 3px solid;
+}
+.calculatingBlockGreen form {
+  border: 3px #81B29A solid;
+}
+.calculatingBlockGreen h2 {
+  background-color: #81B29A;
+}
+.calculatingBlockGreen .calculatingBlockContent .questionBlock {
+  border: #81B29A 3px solid;
+}
+.calculatingBlockGreen .button {
+  border: 3px #81B29A solid;
+}
+
 /*# sourceMappingURL=binarySystem.css.map */

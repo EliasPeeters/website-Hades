@@ -133,6 +133,8 @@ function dualToDezimal(inputNumber) {
     return outputNumber;
 }
 
+// HEX
+
 function decimalToHex(input) {
     return input.toString(16).toUpperCase();
 }
@@ -144,4 +146,20 @@ function hexToDecimal(input) {
 function randomHexNumber() {
     let number = Math.round(Math.random()*255);
     return decimalToHex(number)
+}
+
+
+// OCTAL
+
+function decimalToOctal(input) {
+    return input.toString(8);
+}
+
+function octalToDecimal(input) {
+    return parseInt(input, 8);
+}
+
+function randomOctal() {
+    let number = Math.round(Math.random()*255);
+    return decimalToOctal(number)
 }

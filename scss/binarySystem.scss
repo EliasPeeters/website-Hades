@@ -142,3 +142,45 @@
         }
     }
 }
+
+.calculatingBlockRed {
+    border: $redColor 3px solid;
+    form {
+        border: 3px $redColor solid;
+    }
+
+    h2 {
+        background-color: $redColor;
+    }
+
+    .calculatingBlockContent {
+        .questionBlock {
+            border: $redColor 3px solid;
+        }
+    }
+
+    .button {
+        border: 3px #E07A5F solid; 
+    }
+}
+
+.calculatingBlockGreen {
+    border: $greenColor 3px solid;
+    form {
+        border: 3px $greenColor solid;
+    }
+
+    h2 {
+        background-color: $greenColor;
+    }
+
+    .calculatingBlockContent {
+        .questionBlock {
+            border: $greenColor 3px solid;
+        }
+    }
+
+    .button {
+        border: 3px $greenColor solid; 
+    }
+}
