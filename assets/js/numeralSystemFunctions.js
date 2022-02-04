@@ -18,6 +18,7 @@ function showAdditionSolution() {
 function newBinaryToDecimalTask() {
     let number = randomDualNumber(2, 8);
     document.getElementsByClassName('binaryToDecimalNumber')[0].innerHTML = number;
+    document.getElementsByClassName('binaryToDecimalOutput')[0].innerHTML = '';
 }
 
 function showBinaryToDecimalSolution() {
@@ -28,6 +29,7 @@ function showBinaryToDecimalSolution() {
 function newDecimalTOBinary() {
     let number = Math.round(Math.random()*255);
     document.getElementsByClassName('decimalToBinaryNumber')[0].innerHTML = number;
+    document.getElementsByClassName('decimalToBinaryOutput')[0].innerHTML = '';  
 }
 
 function showDecimalToBinarySolution() {
