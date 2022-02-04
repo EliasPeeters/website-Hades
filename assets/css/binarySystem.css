@@ -146,6 +146,9 @@
 .calculatingBlockRed .button {
   border: 3px #E07A5F solid;
 }
+.calculatingBlockRed .button:hover {
+  background-color: #E07A5F;
+}
 
 .calculatingBlockGreen {
   border: #81B29A 3px solid;
@@ -161,6 +164,9 @@
 }
 .calculatingBlockGreen .button {
   border: 3px #81B29A solid;
+}
+.calculatingBlockGreen .button:hover {
+  background-color: #81B29A;
 }
 
 /*# sourceMappingURL=binarySystem.css.map */

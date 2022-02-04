@@ -161,6 +161,10 @@
 
     .button {
         border: 3px #E07A5F solid; 
+
+        &:hover {
+            background-color: #E07A5F;
+        }
     }
 }
 
@@ -182,5 +186,9 @@
 
     .button {
         border: 3px $greenColor solid; 
+
+        &:hover {
+            background-color: $greenColor;
+        }
     }
 }
