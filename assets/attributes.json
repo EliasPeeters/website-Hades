@@ -32,7 +32,7 @@
             "date": "2021-09-22",
             "description": "Just a quick article for java flashcards", 
             "image": "java.jpg",
-            "visible": true,
+            "visible": false,
             "js": [
                 "javaFlashCards.js"
             ],
